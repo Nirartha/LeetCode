@@ -1,0 +1,30 @@
+package Easy;
+
+/*
+ * 
+ * Given a 32-bit signed integer, reverse digits of an integer.
+ * 
+ * 
+ * @author Kuanyow Chen (Dennis)
+ * 
+ */
+public class Reverse_Integer {
+	
+	public int reverse(int x) {
+        
+        int rev = 0;
+        while (x != 0) {
+            int pop = x % 10;
+            x /= 10;
+            if (rev > Integer.MAX_VALUE/10) 
+                return 0;
+            if (rev < Integer.MIN_VALUE/10) 
+                return 0;
+            rev = rev * 10 + pop;
+        }
+        return rev;
+    }
+	
+	
+	
+}
